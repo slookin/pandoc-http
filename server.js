@@ -20,7 +20,7 @@ const port = 80;
  */
 function pandoc(inputFile, outputFile, from, to) {
     return new Promise((resolve, reject) => {
-        let args = ['-f', from, '-t', to, '--extract-media=/tmp','-o', outputFile, inputFile];
+        let args = ['-f', from, '-t', to, '--extract-media=/app','-o', outputFile, inputFile];
         let pandoc = spawn(pandocPath, args);
 
         let error = '';
